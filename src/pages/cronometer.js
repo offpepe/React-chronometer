@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Alert from '../components/Alert'
 import PredefinedTimes from '../components/PredefinedTimes'
 
 class Cronometer extends Component {
@@ -12,13 +13,6 @@ class Cronometer extends Component {
             paused: false,
             wasStarted: false,
         }
-    }
-
-    mountTimer = () => {
-      const { dez, un, dec, cent } = this.state;
-      const timeToShow = `${dez}${un}:${dec}${cent}`;
-      const timeToWork = parseFloat(dez+''+un+','+dec+''+cent)*60000;
-      this.setState({ timeToShow, timeToWork });
     }
 
     timer = () => this.clockEngine();        
@@ -43,6 +37,10 @@ class Cronometer extends Component {
         if(cent > 0){
             cent -= 1;
         }
+        if([dez, un, dec, cent].every((ind) => ind === 0)) {
+            clearInterval(intervalo);
+        }
+        console.log('hi');
        this.setState({ dez, un, dec, cent })}, 1000);
        this.setState({ intervalo, wasStarted: true  })};
     }   
@@ -76,9 +74,9 @@ class Cronometer extends Component {
       const  { dez, un, dec, cent } = this.state;
       const time = [dez, un, dec, cent];
       if(time.every((ind) => ind === 0)){
-          alert('Fim do intervalo!');
-          this.setState({ wasStarted: false })
+          this.setState({ wasStarted: false, alert: true, })
       }
+    
     }
 
     handles = {
@@ -105,19 +103,23 @@ class Cronometer extends Component {
         },
         handleCent: (e) => {
             let { cent } = this.state;
+            if (e.target.value.length === 1 ){
             cent = Number(e.target.value);
             this.setState({ cent });
+            }
         }
     }
 
     render() {
-        const { dez, un, dec, cent, wasStarted } = this.state;
+        const { dez, un, dec, cent, wasStarted, alert } = this.state;
         if(wasStarted){
             this.alertFinished();
         }
         return (
             <main className="cronometer-page" >
-                <h2 className='title is-centered'> Vamos de intervalo? </h2>
+                
+              {alert? <Alert handler={ () => this.setState({ alert: false }) } /> : <>
+              <h2 className='title is-centered'> Vamos de intervalo? </h2>
               <div class='cronometer'>
                 <form>
                     <div className="time-controller">
@@ -135,6 +137,7 @@ class Cronometer extends Component {
                     </div>
                 </form>
               </div>
+              </>}
             </main>
         );
     }
