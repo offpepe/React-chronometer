@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PredefinedTimes from '../components/PredefinedTimes'
 
 class Cronometer extends Component {
     constructor() {
@@ -51,10 +52,23 @@ class Cronometer extends Component {
         clearInterval(intervalo);
     }
 
+    setPredefinedTime = (e) => {
+        let { dez, un } = this.state;
+        const time = Number(Object.entries(e.target).pop().pop().time);
+        if(time === 1){
+            dez = time;
+            un = 0
+        } else {
+            un = time;
+            dez = 0;
+        }
+        this.setState({ dez, un });
+    }
+
     stopTimer = () => {
         const { intervalo } = this.state;
         clearInterval(intervalo);
-        this.setState({ dez: 0, un:0, dec:0, cent: 0})
+        this.setState({ wasStarted: false, dez: 0, un:0, dec:0, cent: 0})
 
     };
 
@@ -62,7 +76,7 @@ class Cronometer extends Component {
       const  { dez, un, dec, cent } = this.state;
       const time = [dez, un, dec, cent];
       if(time.every((ind) => ind === 0)){
-          alert('finished');
+          alert('Fim do intervalo!');
           this.setState({ wasStarted: false })
       }
     }
@@ -102,13 +116,15 @@ class Cronometer extends Component {
             this.alertFinished();
         }
         return (
-            <main>
+            <main className="cronometer-page" >
                 <h2 className='title is-centered'> Vamos de intervalo? </h2>
               <div class='cronometer'>
                 <form>
                     <div className="time-controller">
+                    <PredefinedTimes times={ ['3:00','5:00', '10:00'] } handle={ this.setPredefinedTime } />
                     <input max="9" min="0" onChange={ this.handles.handleDez } type="number" maxLength="1" value={ dez }  />
                     <input max="9" min="0" onChange={ this.handles.handleUn } type="number" maxLength="1" value={ un } />
+                    <h2 className="double-dots">:</h2>
                     <input max="9" min="0" onChange={ this.handles.handleDec } type="number" maxLength="1" value={ dec } />
                     <input max="9" min="0" onChange={ this.handles.handleCent } type="number" maxLength="1" value={ cent } />
                     </div>

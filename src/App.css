@@ -1,4 +1,5 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
 
 input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -9,19 +10,43 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+.cronometer-header {
+  padding: 20px;
+  background-color: #3E2A35;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cronometer-page {
+  margin: 30px 0;
+  text-align: center;
+}
+
 .cronometer {
   display: flex;
   justify-content: center;
-  min-height: 50vh;
+  align-items: center;
+}
+
+.time-controller {
+  display: flex;
   align-items: center;
 }
 
 .time-controller input {
+  font-family: 'Odibee Sans', cursive;
   text-align: center;
-  font-size: 40px;
+  font-size: 80px;
   margin: 0;
   width: 100px;
   height: 100px;
+}
+
+.double-dots {
+  font-size: 80px;
+  font-weight: 700;
+  text-align: center;
+  padding-bottom: 14px;
 }
 
 .time-starter {
@@ -31,3 +56,9 @@ input[type=number] {
   align-items: center;
 }
 
+.predefined-times {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 30px;
+}
