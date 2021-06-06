@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/React-chronometer/static/css/main.29cedf87.chunk.css",
-    "main.js": "/React-chronometer/static/js/main.cc3d9df1.chunk.js",
-    "main.js.map": "/React-chronometer/static/js/main.cc3d9df1.chunk.js.map",
+    "main.js": "/React-chronometer/static/js/main.bf2879a2.chunk.js",
+    "main.js.map": "/React-chronometer/static/js/main.bf2879a2.chunk.js.map",
     "runtime-main.js": "/React-chronometer/static/js/runtime-main.7e5f3d16.js",
     "runtime-main.js.map": "/React-chronometer/static/js/runtime-main.7e5f3d16.js.map",
     "static/js/2.de9d5198.chunk.js": "/React-chronometer/static/js/2.de9d5198.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.7e5f3d16.js",
     "static/js/2.de9d5198.chunk.js",
     "static/css/main.29cedf87.chunk.css",
-    "static/js/main.cc3d9df1.chunk.js"
+    "static/js/main.bf2879a2.chunk.js"
   ]
 }
