@@ -40,7 +40,6 @@ class Cronometer extends Component {
         if([dez, un, dec, cent].every((ind) => ind === 0)) {
             clearInterval(intervalo);
         }
-        console.log('hi');
        this.setState({ dez, un, dec, cent })}, 1000);
        this.setState({ intervalo, wasStarted: true  })};
     }   
