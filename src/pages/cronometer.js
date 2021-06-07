@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Alert from '../components/Alert'
-import PredefinedTimes from '../components/PredefinedTimes'
+import Alert from '../components/Alert';
+import PredefinedTimes from '../components/PredefinedTimes';
 
 class Cronometer extends Component {
     constructor() {
@@ -109,6 +109,13 @@ class Cronometer extends Component {
         }
     }
 
+    setStateBlank = () => {
+        const { wasStarted } = this.state;
+        if(wasStarted === false ) {
+        this.setState({ un: '', dez: '', dec: '', cent: '' });
+        }
+    }
+
     render() {
         const { dez, un, dec, cent, wasStarted, alert } = this.state;
         if(wasStarted){
@@ -116,18 +123,54 @@ class Cronometer extends Component {
         }
         return (
             <main className="cronometer-page" >
-                
               {alert? <Alert handler={ () => this.setState({ alert: false }) } /> : <>
               <h2 className='title is-centered'> Vamos de intervalo? </h2>
-              <div class='cronometer'>
+              <div className='cronometer'>
                 <form>
                     <div className="time-controller">
                     <PredefinedTimes times={ ['3:00','5:00', '10:00'] } handle={ this.setPredefinedTime } />
-                    <input max="9" min="0" onChange={ this.handles.handleDez } type="number" maxLength="1" value={ dez }  />
-                    <input max="9" min="0" onChange={ this.handles.handleUn } type="number" maxLength="1" value={ un } />
+                    <input
+                      max="9"
+                      min="0"
+                      disabled={ wasStarted }
+                      onClick={this.setStateBlank}
+                      onChange={ this.handles.handleDez }
+                      type="number"
+                      maxLength="1"
+                      placeholder={ 0 }
+                      value={ dez }
+                    />
+                    <input
+                      max="9"
+                      min="0"
+                      disabled={ wasStarted }
+                      onChange={ this.handles.handleUn }
+                      type="number"
+                      maxLength="1"
+                      placeholder={ 0 }
+                      value={ un }
+                    />
                     <h2 className="double-dots">:</h2>
-                    <input max="9" min="0" onChange={ this.handles.handleDec } type="number" maxLength="1" value={ dec } />
-                    <input max="9" min="0" onChange={ this.handles.handleCent } type="number" maxLength="1" value={ cent } />
+                    <input
+                      max="9"
+                      min="0"
+                      disabled={ wasStarted }
+                      onChange={ this.handles.handleDec }
+                      type="number"
+                      maxLength="1"
+                      placeholder={ 0 }
+                      value={ dec }
+                    />
+                    <input
+                    max="9"
+                    min="0"
+                    disabled={ wasStarted }
+                    onChange={ this.handles.handleCent }
+                    type="number"
+                    maxLength="1"
+                    placeholder={ 0 }
+                    value={ cent }
+                    />
                     </div>
                     <div className="time-starter">
                     <button type='button' className="button is-primary is-centered" onClick={ this.timer }> Start Countdown </button>
