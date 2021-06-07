@@ -1,3 +1,5 @@
+/* eslint-disable */
+import React from 'react';
 import Cronometer from './pages/cronometer';
 import Header from './components/Header';
 import Music from './components/Music';
