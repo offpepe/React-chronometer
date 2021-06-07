@@ -57,7 +57,7 @@ class Header extends Component {
     return (
       <header className="cronometer-header">
         {/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
-        <button type="button" className="darkmode" onClick={this.darkMode}><i className="fas fa-adjust" /></button>
+        <button type="button" className="darkmode" onClick={this.darkmode}><i className="fas fa-adjust" /></button>
       </header>
     );
   }
