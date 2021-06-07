@@ -5,7 +5,7 @@ class Footer extends Component {
         return (
             <footer className="footer">
                 <div className="credits">
-                    <h4 className="title is-4">Desenvovlido por Alan Albuquerque F. Lopes</h4>
+                    <h6>Desenvolvido por Alan Albuquerque F. Lopes</h6>
                 </div>
                 <div className="network">
                     <a className="github-anchor" href="https://github.com/offpepe" target="_blank" rel="noreferrer" >

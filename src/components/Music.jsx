@@ -45,7 +45,7 @@ class Music extends Component {
             '37i9dQZF1DX1zM9gA91vC5',
             '23BPtay85THHjP6naVqQOv',
             '6bUBpdLtsXYJESmT4MnMw5',
-
+            '69mvXDhX8WxJBWsdoFUlBM',
         ],
         playlistsTurmas: {
             T13A: '1Hk1ZtfUJ3yD7JdVNx3Hd9',

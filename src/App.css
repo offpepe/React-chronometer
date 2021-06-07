@@ -1,6 +1,6 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css";
 @import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 
 input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -92,26 +92,46 @@ input[type=number] {
 }
 
 .footer {
+  background-color: #3E2A35;
   display: flex;
   justify-content: space-between;
-  width:100%;
   max-height: 30px;
   align-items: center;
-  float: inline-end;
-  margin: 0 10px;
 }
 
 .credits {
   width: 50%;
-  font-family: 'Bebas Neue', cursive;
+  color: white;
+  font-family: 'Staatliches', cursive;
   font-weight: 400;
+  font-size: 25px;
 }
 
 .network {
   display: flex;
-  font-size: 40px;
+  font-size: 50px;
 }
 
 .network a {
+  color: white;
   margin: 0 10px;
+}
+
+.network a:hover {
+  color: #525252;
+}
+
+.credits, .network {
+  padding-top: 40px;
+}
+
+.darkmode {
+  border: none;
+  background-color: transparent;
+  font-size: 40px;
+  color: white;
+}
+
+.darkmode:hover {
+  color: #525252;
 }
