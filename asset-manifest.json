@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/React-chronometer/static/css/main.29cedf87.chunk.css",
-    "main.js": "/React-chronometer/static/js/main.bf2879a2.chunk.js",
-    "main.js.map": "/React-chronometer/static/js/main.bf2879a2.chunk.js.map",
+    "main.css": "/React-chronometer/static/css/main.3ab96520.chunk.css",
+    "main.js": "/React-chronometer/static/js/main.fc2ad1f1.chunk.js",
+    "main.js.map": "/React-chronometer/static/js/main.fc2ad1f1.chunk.js.map",
     "runtime-main.js": "/React-chronometer/static/js/runtime-main.7e5f3d16.js",
     "runtime-main.js.map": "/React-chronometer/static/js/runtime-main.7e5f3d16.js.map",
     "static/js/2.de9d5198.chunk.js": "/React-chronometer/static/js/2.de9d5198.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.126c069c.chunk.js": "/React-chronometer/static/js/3.126c069c.chunk.js",
     "static/js/3.126c069c.chunk.js.map": "/React-chronometer/static/js/3.126c069c.chunk.js.map",
     "index.html": "/React-chronometer/index.html",
-    "static/css/main.29cedf87.chunk.css.map": "/React-chronometer/static/css/main.29cedf87.chunk.css.map",
+    "static/css/main.3ab96520.chunk.css.map": "/React-chronometer/static/css/main.3ab96520.chunk.css.map",
     "static/js/2.de9d5198.chunk.js.LICENSE.txt": "/React-chronometer/static/js/2.de9d5198.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.7e5f3d16.js",
     "static/js/2.de9d5198.chunk.js",
-    "static/css/main.29cedf87.chunk.css",
-    "static/js/main.bf2879a2.chunk.js"
+    "static/css/main.3ab96520.chunk.css",
+    "static/js/main.fc2ad1f1.chunk.js"
   ]
 }
